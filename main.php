@@ -2,7 +2,7 @@
 function imprimir($matriz,$num){ #permite imprimir la matriz
     for($i = 0; $i < $num; $i++){
         for($j = 0; $j < $num; $j++){
-            echo "{$matriz[$i][$j]}";
+            echo $matriz[$i][$j];
         }
     }
     echo "\n";
@@ -32,7 +32,7 @@ function crear_matriz($gmat,$numero){
     return $gmat;
 }
 $matriz = crear_matriz($matrizDFS,$numero); #genera una matriz numero x numero (arreglo x arreglo) con valor de 0s, esta sirve para almacenar los valores de la funcion recursiva generar_DFS
-$padre = array($indice);
+$padre = array($numero);
 function generar_DFS($indice,$mat,$numero){ #genera una matriz global numero X numero lleno de 0's, esta sirve para almacenar los valores de la funcion recursiva generar_DFS
     $padre[$indice] = 1;
     foreach(range(0,$numero) as $i){
